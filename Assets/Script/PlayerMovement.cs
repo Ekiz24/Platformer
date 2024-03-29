@@ -1,48 +1,86 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
+
 
 public class PlayerMovement : MonoBehaviour
 {
-    Rigidbody2D rb;
+    [SerializeField] float runSpeed = 10f;
+    [SerializeField] float jumpSpeed = 5f;
 
-    public float PlayerSpeed = 5f;
 
-    private float moveX;
+    Vector2 moveInput;
+    Rigidbody2D myRigidbody;
+    Animator myAnimator;
+    CapsuleCollider2D myBodyCollider;
+    BoxCollider2D myFeetCollider;
+    float gravityScaleAtStart;
+
+    bool isAlive = true;
 
     void Start()
     {
-        rb=GetComponent<Rigidbody2D>();
+        myRigidbody = GetComponent<Rigidbody2D>();
+        myAnimator = GetComponent<Animator>();
+        myBodyCollider = GetComponent<CapsuleCollider2D>();
+        myFeetCollider = GetComponent<BoxCollider2D>();
+        gravityScaleAtStart = myRigidbody.gravityScale;
     }
-
 
     void Update()
     {
-        
+        if (!isAlive) { return; }
+        Run();
+        FlipSprite();
+        Die();
     }
 
-    private void FixedUpdate()
+    void OnMove(InputValue value)
     {
-        Move();
+        if (!isAlive) { return; }
+        moveInput = value.Get<Vector2>();
     }
 
-    private void Move()
+    void OnJump(InputValue value)
     {
-        moveX = Input.GetAxis("Horizontal");
-        rb.velocity = new Vector2(moveX * PlayerSpeed, rb.velocity.y);
-
-        if (moveX > 0)
+        if (!isAlive) { return; }
+        if (!myFeetCollider.IsTouchingLayers(LayerMask.GetMask("Ground")))
         {
-            transform.localScale = new Vector3(1, 1, 1);
+            return;
         }
-
-        else if (moveX<0)
+        if (value.isPressed)
         {
-            transform.localScale = new Vector3(-1, 1, 1);
+            myRigidbody.velocity += new Vector2(0f, jumpSpeed);
+        }
+    }
+
+    void Run()
+    {
+        //Vector2 playerVelocity = new Vector2(moveInput.x * runSpeed, myRigidbody.velocity.y);
+        //myRigidbody.velocity = playerVelocity;
+        myRigidbody.velocity = new Vector2(moveInput.x * runSpeed, myRigidbody.velocity.y);
+
+        bool playerHasHorizontalSpeed = Mathf.Abs(myRigidbody.velocity.x) > Mathf.Epsilon;
+        myAnimator.SetBool("isRunning", playerHasHorizontalSpeed);
+    }
+
+    void FlipSprite()
+    {
+        bool playerHasHorizontalSpeed = Mathf.Abs(myRigidbody.velocity.x) > Mathf.Epsilon;
+
+        if (playerHasHorizontalSpeed)
+        {
+            transform.localScale = new Vector2(Mathf.Sign(myRigidbody.velocity.x), 1f);
         }
     }
 
 
-
-    
+    void Die()
+    {
+        if (myBodyCollider.IsTouchingLayers(LayerMask.GetMask("Enemies")))
+        {
+            isAlive = false;
+        }
+    }
 }
