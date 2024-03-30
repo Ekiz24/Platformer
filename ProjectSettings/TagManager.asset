@@ -8,6 +8,7 @@ TagManager:
   - CheckPoints
   - ShadowMan
   - prisoner
+  - whisper
   layers:
   - Default
   - TransparentFX

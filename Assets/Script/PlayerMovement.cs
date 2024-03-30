@@ -10,12 +10,15 @@ public class PlayerMovement : MonoBehaviour
 
     public float runSpeed = 10f;
     public float jumpSpeed = 20f;
-    public float acceleration = 20f; 
-    public float deceleration = 20f; 
+    public float acceleration = 20f;
+    public float deceleration = 20f;
 
     Vector2 moveInput;
     Rigidbody2D myRigidbody;
     Animator myAnimator;
+
+    public AudioSource whisper;
+
     public BoxCollider2D myBodyCollider;
     public BoxCollider2D myFeetCollider;
     public GameObject dialog;
@@ -31,6 +34,7 @@ public class PlayerMovement : MonoBehaviour
     {
         myRigidbody = GetComponent<Rigidbody2D>();
         myAnimator = GetComponent<Animator>();
+        //whisper = GetComponent<AudioSource>();
 
         gravityScaleAtStart = myRigidbody.gravityScale;
 
@@ -132,8 +136,13 @@ public class PlayerMovement : MonoBehaviour
 
         if(collision.gameObject.CompareTag("prisoner"))
         {
-            print("eee");
-            dialog.SetActive(true); 
+            dialog.SetActive(true);
+        }
+        //touch the whisper
+        if (collision.gameObject.CompareTag("whisper"))
+        {
+            whisper.Play();
+            Destroy(collision.gameObject);
         }
 
 
