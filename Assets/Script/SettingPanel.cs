@@ -34,6 +34,7 @@ public class SettingPanel : MonoBehaviour
     public void HowToPlay()
     {
         howToPlayPanel.SetActive(true);
+        settingPanel.SetActive(false);
     }
 
     public void QuitGame()
