@@ -8,11 +8,15 @@ public class SettingPanel : MonoBehaviour
 {
     [SerializeField] GameObject settingPanel;
     [SerializeField] GameObject confirmQuitPanel;
+    [SerializeField] GameObject musicPanel;
+    [SerializeField] GameObject howToPlayPanel;
 
     void Start()
     {
         settingPanel.SetActive(false);
         confirmQuitPanel.SetActive(false);
+        musicPanel.SetActive(false);
+        howToPlayPanel.SetActive(false);
     }
 
      public void ShowSettingPanel()
@@ -23,12 +27,13 @@ public class SettingPanel : MonoBehaviour
 
     public void MusicSetting()
     {
-
+        musicPanel.SetActive(true);
+        settingPanel.SetActive(false);
     }
 
     public void HowToPlay()
     {
-
+        howToPlayPanel.SetActive(true);
     }
 
     public void QuitGame()
@@ -45,8 +50,10 @@ public class SettingPanel : MonoBehaviour
 
     public void NoIdontQuitGame()
     {
-        confirmQuitPanel.SetActive(false);
         settingPanel.SetActive(true);
+        confirmQuitPanel.SetActive(false);
+        musicPanel.SetActive(false);
+        howToPlayPanel.SetActive(false);
     }
 
     public void ReturnToGame()
