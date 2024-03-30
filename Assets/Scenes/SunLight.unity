@@ -631,4 +631,4 @@ MonoBehaviour:
   lightAnimator: {fileID: 218654034}
   animationName: RevealSunlight
   safeDistanceMargin: 1
-  shadowMan: {fileID: 0}
+  shadowMan: {fileID: 1666653963}
