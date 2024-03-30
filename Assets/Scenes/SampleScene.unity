@@ -69087,7 +69087,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1462153969}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 15.42, y: 8.65, z: 1}
+  m_LocalPosition: {x: 8.59, y: 7.6, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -69413,7 +69413,7 @@ Animator:
   m_GameObject: {fileID: 1666653962}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 0bac466089b574360a3a4c47f818f2f8, type: 2}
+  m_Controller: {fileID: 9100000, guid: bb1142287abebec4ea9edd998c2d70fb, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -69441,7 +69441,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 2.2, y: 2.8}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -69512,7 +69512,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: -508484106, guid: 48c12cb322f654644940dd7f8465a9a1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -69549,11 +69549,11 @@ GameObject:
   - component: {fileID: 1678143736}
   - component: {fileID: 1678143735}
   - component: {fileID: 1678143734}
-  - component: {fileID: 1678143740}
   - component: {fileID: 1678143739}
   - component: {fileID: 1678143738}
   - component: {fileID: 1678143737}
   - component: {fileID: 1678143741}
+  - component: {fileID: 1678143742}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -69642,7 +69642,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1678143731}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -407.86008, y: -180.36346, z: 0.9086779}
+  m_LocalPosition: {x: -410.05, y: -213.04, z: 0.9086779}
   m_LocalScale: {x: 0.9086779, y: 0.9086779, z: 0.9086779}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -69715,35 +69715,19 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.04915905, y: 0.24740362}
+  m_Offset: {x: -0.048301935, y: 0.23904994}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
-    oldSize: {x: 1.125, y: 1.875}
+    oldSize: {x: 0.9, y: 1.5}
     newSize: {x: 0.32, y: 0.32}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5204544, y: 0.49480724}
+  m_Size: {x: 0.6485456, y: 0.5115146}
   m_EdgeRadius: 0
---- !u!70 &1678143740
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1678143731}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 6200000, guid: 492ec898d1e834acfbda3f20b7c96be3, type: 2}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.03944373, y: 1.0121236}
-  m_Size: {x: 1.453464, y: 1.9340901}
-  m_Direction: 0
 --- !u!114 &1678143741
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69760,7 +69744,35 @@ MonoBehaviour:
   jumpSpeed: 20
   acceleration: 20
   deceleration: 20
+  myBodyCollider: {fileID: 1678143742}
+  myFeetCollider: {fileID: 1678143739}
   pointsText: {fileID: 368968224}
+--- !u!61 &1678143742
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1678143731}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.019492969, y: 0.75556874}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0}
+    oldSize: {x: 0.9, y: 1.5}
+    newSize: {x: 0.32, y: 0.32}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.8276011, y: 1.5000002}
+  m_EdgeRadius: 0
 --- !u!1 &1748708401
 GameObject:
   m_ObjectHideFlags: 0
