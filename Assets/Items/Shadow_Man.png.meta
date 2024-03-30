@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 68507a7cfc11d47b18a410255524a267
+guid: 48c12cb322f654644940dd7f8465a9a1
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 20
+  spritePixelsToUnits: 10
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -78,43 +78,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
     buildTarget: Standalone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: iPhone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -141,85 +105,127 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Characters_0
+      name: Shadow_Man_1
       rect:
         serializedVersion: 2
-        x: 9
-        y: 96
-        width: 18
-        height: 30
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 48
+        y: 5
+        width: 22
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aa1c71c8585e247708ba6e9115748a4b
-      internalID: -415881106
+      spriteID: 0efd4ec6308d6f74bb85328ef4504e06
+      internalID: -1229003453
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Characters_1
+      name: Shadow_Man_0
       rect:
         serializedVersion: 2
-        x: 33
-        y: 96
-        width: 18
-        height: 30
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 18
+        y: 5
+        width: 22
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a603f3b09db664450a0f2c22aad127c4
-      internalID: -1426310407
+      spriteID: 77588cacbd7059746803a5272481fd1f
+      internalID: -508484106
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Characters_2
+      name: Shadow_Man_2
       rect:
         serializedVersion: 2
-        x: 59
-        y: 96
-        width: 18
-        height: 30
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 76
+        y: 5
+        width: 22
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 122cf86bd87e249ed92eb0e9382783f7
-      internalID: 75861914
+      spriteID: 88ab5946b6dd1ae439d885a11d0d13cb
+      internalID: 909918453
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Characters_3
+      name: Shadow_Man_3
       rect:
         serializedVersion: 2
-        x: 81
-        y: 96
-        width: 18
-        height: 30
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 105
+        y: 5
+        width: 22
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6eaa4a78460cc48f2b93feb7486c1881
-      internalID: 44768436
+      spriteID: 360f5fbefe0d3614da8ef49f4e9a9f86
+      internalID: -516542267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shadow_Man_4
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 5
+        width: 22
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f00147d39fea9a7478a092bd6275fb63
+      internalID: 2051643863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shadow_Man_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 5
+        width: 22
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1bcb39cade3dea488e613b29a9df0ea
+      internalID: 1909071786
       vertices: []
       indices: 
       edges: []
@@ -235,10 +241,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Characters_0: -415881106
-      Characters_1: -1426310407
-      Characters_2: 75861914
-      Characters_3: 44768436
+      Shadow_Man_0: -508484106
+      Shadow_Man_1: -1229003453
+      Shadow_Man_2: 909918453
+      Shadow_Man_3: -516542267
+      Shadow_Man_4: 2051643863
+      Shadow_Man_5: 1909071786
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

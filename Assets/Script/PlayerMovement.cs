@@ -16,8 +16,8 @@ public class PlayerMovement : MonoBehaviour
     Vector2 moveInput;
     Rigidbody2D myRigidbody;
     Animator myAnimator;
-    CapsuleCollider2D myBodyCollider;
-    BoxCollider2D myFeetCollider;
+    public BoxCollider2D myBodyCollider;
+    public BoxCollider2D myFeetCollider;
 
     float gravityScaleAtStart;
     bool isAlive = true;
@@ -30,8 +30,7 @@ public class PlayerMovement : MonoBehaviour
     {
         myRigidbody = GetComponent<Rigidbody2D>();
         myAnimator = GetComponent<Animator>();
-        myBodyCollider = GetComponent<CapsuleCollider2D>();
-        myFeetCollider = GetComponent<BoxCollider2D>();
+
         gravityScaleAtStart = myRigidbody.gravityScale;
     }
 
