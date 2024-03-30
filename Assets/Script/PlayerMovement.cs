@@ -16,7 +16,7 @@ public class PlayerMovement : MonoBehaviour
     Vector2 moveInput;
     Rigidbody2D myRigidbody;
     Animator myAnimator;
-    public BoxCollider2D myBodyCollider;
+    public CapsuleCollider2D myBodyCollider;
     public BoxCollider2D myFeetCollider;
     public GameObject dialog;
 

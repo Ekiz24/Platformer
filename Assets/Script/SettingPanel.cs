@@ -10,6 +10,7 @@ public class SettingPanel : MonoBehaviour
     [SerializeField] GameObject confirmQuitPanel;
     [SerializeField] GameObject musicPanel;
     [SerializeField] GameObject howToPlayPanel;
+    [SerializeField] GameObject settingButton;
 
     void Start()
     {
@@ -23,6 +24,7 @@ public class SettingPanel : MonoBehaviour
     {
         Time.timeScale = 0;
         settingPanel.SetActive(true);
+        settingButton.SetActive(false);
     }
 
     public void MusicSetting()
@@ -61,5 +63,6 @@ public class SettingPanel : MonoBehaviour
     {
         Time.timeScale = 1;
         settingPanel.SetActive(false);
+        settingButton.SetActive(true);
     }
 }
