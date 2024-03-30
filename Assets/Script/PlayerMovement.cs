@@ -125,7 +125,7 @@ public class PlayerMovement : MonoBehaviour
             switch(checkpoints)
             {
                 case 1:
-                    transform.position = new Vector3(-8.21f, -2.99f, 1f);
+                    transform.position = new Vector3(6.43f, 5.09f, 1f);
                     isAlive = true;
                     break;
 
