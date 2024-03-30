@@ -18,6 +18,7 @@ public class PlayerMovement : MonoBehaviour
     Animator myAnimator;
     public BoxCollider2D myBodyCollider;
     public BoxCollider2D myFeetCollider;
+    public GameObject dialog;
 
     float gravityScaleAtStart;
     bool isAlive = true;
@@ -32,6 +33,8 @@ public class PlayerMovement : MonoBehaviour
         myAnimator = GetComponent<Animator>();
 
         gravityScaleAtStart = myRigidbody.gravityScale;
+
+         dialog.SetActive(false);
     }
 
     void Update()
@@ -39,6 +42,14 @@ public class PlayerMovement : MonoBehaviour
         if (!isAlive) { return; }
         Run();
         FlipSprite();
+
+        if (Input.anyKeyDown)
+        {
+            dialog.SetActive(false);
+        }
+
+           
+
     }
 
     void OnMove(InputValue value)
@@ -90,7 +101,10 @@ public class PlayerMovement : MonoBehaviour
             transform.localScale = new Vector2(Mathf.Sign(myRigidbody.velocity.x), 1f);
         }
     }
-
+         public void ClosingDialog()
+     {
+         dialog.SetActive(false);
+     }
     void OnTriggerEnter2D(Collider2D collision)
     {
         //collect lights
@@ -114,8 +128,16 @@ public class PlayerMovement : MonoBehaviour
         {
             Die();
         }
-    }
+        //prisoner
 
+        if(collision.gameObject.CompareTag("prisoner"))
+        {
+            print("eee");
+            dialog.SetActive(true); 
+        }
+
+
+    }
     void Die()
     {
 
@@ -124,12 +146,12 @@ public class PlayerMovement : MonoBehaviour
             switch(checkpoints)
             {
                 case 1:
-                    transform.position = new Vector3(6.43f, 5.09f, 1f);
+                    transform.position = new Vector3(-393.0572f, -198.78f, 1f);
                     isAlive = true;
                     break;
 
                 default:
-                    transform.position = new Vector3(-8.21f, -2.99f, 1f);
+                    transform.position = new Vector3(-10, -2.99f, 1f);
                     isAlive = true;
                     break;
 
