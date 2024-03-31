@@ -181,7 +181,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: May Use Headphones
+  m_text: ' Headphones are a Must!'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1abf6d14cbd254549b134d52ee796060, type: 2}
   m_sharedMaterial: {fileID: -4405017066795137325, guid: 1abf6d14cbd254549b134d52ee796060, type: 2}
