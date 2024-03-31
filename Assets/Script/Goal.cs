@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class Goal : MonoBehaviour
 {
     private WaitForSeconds finishWating;
+    public AudioSource bgm;
+    public AudioSource wisper;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -19,6 +21,8 @@ public class Goal : MonoBehaviour
     private IEnumerator FinishLine()
     {
         yield return new WaitForSeconds(0.5f);
+        bgm.Stop();
+        wisper.Stop();
         SceneManager.LoadScene("EndingScene");
     }
 }
