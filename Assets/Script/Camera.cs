@@ -19,7 +19,7 @@ public class Camera : MonoBehaviour
     {
         Vector3 targetPos = target.position;
 
-        targetPos.x += 11;
+        targetPos.x += 0;
         targetPos.y += 4;
 
         //align the camera and the target z position
