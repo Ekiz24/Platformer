@@ -19,6 +19,7 @@ public class PlayerMovement : MonoBehaviour
     public CapsuleCollider2D myBodyCollider;
     public BoxCollider2D myFeetCollider;
     public GameObject dialog;
+    public AudioSource whisper;
 
     float gravityScaleAtStart;
     bool isAlive = true;
@@ -128,12 +129,17 @@ public class PlayerMovement : MonoBehaviour
         {
             Die();
         }
-        //prisoner
+        //touch the prisoner
 
         if(collision.gameObject.CompareTag("prisoner"))
         {
-            print("eee");
             dialog.SetActive(true); 
+        }
+        //touch the whisper trigger
+        if (collision.gameObject.CompareTag("whisper"))
+        {
+            whisper.Play();
+            Destroy(collision.gameObject);
         }
 
 
@@ -145,12 +151,29 @@ public class PlayerMovement : MonoBehaviour
             
             switch(checkpoints)
             {
-                case 1:
-                    transform.position = new Vector3(-393.0572f, -198.78f, 1f);
-                    isAlive = true;
-                    break;
+            case 1:
+                transform.position = new Vector3(29.71f, 4.33f, 1f);
+                isAlive = true;
+                break;
+            case 2:
+                transform.position = new Vector3(12.66f, 18.11f, 1f);
+                isAlive = true;
+                break;
+            case 3:
+                transform.position = new Vector3(47.67f, 9.13f, 1f);
+                isAlive = true;
+                break;
+            case 4:
+                transform.position = new Vector3(58.54f, 22.12f, 1f);
+                isAlive = true;
+                break;
+            case 5:
+                transform.position = new Vector3(39.08f, 31.04f, 1f);
+                isAlive = true;
+                break;
 
-                default:
+
+            default:
                     transform.position = new Vector3(-10, -2.99f, 1f);
                     isAlive = true;
                     break;

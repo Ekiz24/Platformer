@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class TorchLight : MonoBehaviour
 {
-    float min = 6f;
-    float max = 6.2f;
+    float min = 4.5f;
+    float max = 5f;
     float speed = 8f; 
 
     UnityEngine.Rendering.Universal.Light2D torch;
