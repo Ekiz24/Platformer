@@ -1,12 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
+using UnityEngine.UI;
 
 public class BGM : MonoBehaviour
 {
     //all the scences have Audio Source with this script
 
     static BGM Music; //is used to store the unique instance of background music
+    AudioSource audioSource;
+    Slider slider;
 
     void Awake()
     {
@@ -27,4 +31,18 @@ public class BGM : MonoBehaviour
 
     }
 
+    private void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
+
+    private void Update()
+    {
+        slider = FindObjectOfType<Slider>();
+        if (slider == null)
+        {
+            return;
+        }
+        audioSource.volume = slider.value;
+    }
 }
